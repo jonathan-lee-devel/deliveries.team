@@ -1,4 +1,6 @@
 <script>
+  import { signOutWithGoogle } from '$lib/auth/sign-in-with-google';
+    import { user } from '$lib/client/firebase';
     import '../app.css';
     import {Navbar, NavBrand, NavHamburger, NavLi, NavUl} from "flowbite-svelte";
 </script>
@@ -14,7 +16,11 @@
     <NavLi href="/" class="text-white">About</NavLi>
     <NavLi href="/" class="text-white">Services</NavLi>
     <NavLi href="/" class="text-white">Pricing</NavLi>
-    <NavLi href="/login" class="text-white">Login</NavLi>
+    {#if !$user}
+        <NavLi href="/login" class="text-white">Login</NavLi>
+    {:else}
+        <NavLi on:click={signOutWithGoogle} class="text-white bg-red-700">Logout</NavLi>
+    {/if}
 </NavUl>
 </Navbar>
 <div class="min-h-screen flex flex-col">
