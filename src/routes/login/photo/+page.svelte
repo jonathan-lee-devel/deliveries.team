@@ -8,7 +8,7 @@
     let previewUrl: string;
     let uploading = false;
 
-    $: href = `/${$userData?.username}/edit`;
+    $: href = `/users/${$userData?.username}/`;
 
     async function upload(e: any) {
         uploading = true;
