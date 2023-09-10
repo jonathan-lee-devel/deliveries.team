@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { signOutWithGoogle } from "$lib/auth/sign-in-with-google";
+  import { signInWithGoogle, signOutWithGoogle } from "$lib/auth/sign-in-with-google";
   import { userData } from "$lib/client/firebase";
 </script>
 
@@ -31,7 +31,7 @@
                 <a href="/">Settings</a>
             </li>
             <li>
-                <button on:click={signOutWithGoogle}>Logout</button>
+                <a href="/logout">Logout</a>
             </li>
         {:else}
             <li>

@@ -3,7 +3,11 @@
     import {signInWithGoogle, signOutWithGoogle} from '$lib/auth/sign-in-with-google';
 </script>
 
-<h2>Login</h2>
+{#if $user}
+    <h2>Logout</h2>
+{:else}
+    <h2>Login</h2>
+{/if}
 
 {#if $user}
     <h2 class="card-title">Welcome, {$user.displayName}</h2>

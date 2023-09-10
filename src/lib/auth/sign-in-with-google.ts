@@ -1,7 +1,10 @@
 import {GoogleAuthProvider, signInWithPopup, signOut} from 'firebase/auth';
-import {auth} from '$lib/client/firebase-init';
+import {auth, db} from '$lib/client/firebase-init';
 import {HttpMethod} from '$lib/http/enum/HttpMethod';
 import {HttpHeaderPresets} from '$lib/http/enum/HttpHeaderPresets';
+import {HttpStatus} from '$lib/http/enum/HttpStatus';
+import {redirect} from '@sveltejs/kit';
+import {LoginStatus} from './login-status';
 
 /**
  * Function which signs in with google and stores JWT on client-side.
