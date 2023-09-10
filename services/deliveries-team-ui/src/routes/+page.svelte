@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Counter from '../components/Counter.svelte';
+    import Counter from '$lib/components/Counter.svelte';
     import { Button, Alert, Card, Toast } from 'flowbite-svelte';
 </script>
 
