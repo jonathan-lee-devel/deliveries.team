@@ -1,7 +1,7 @@
 import {error} from '@sveltejs/kit';
 import {collection, getDocs, limit, query, where} from 'firebase/firestore';
 import type {PageLoad} from './$types';
-import {db} from '$lib/client/auth/firebase-init';
+import {db} from '$lib/client/firebase-init';
 
 export const load = (async ({params}) => {
   const collectionRef = collection(db, 'users');

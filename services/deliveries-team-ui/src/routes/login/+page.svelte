@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { user } from '$lib/client/auth/firebase';
-    import {signInWithGoogle, signOutWithGoogle} from '$lib/client/auth/sign-in-with-google';
+    import { user } from '$lib/client/firebase';
+    import {signInWithGoogle, signOutWithGoogle} from '$lib/auth/sign-in-with-google';
 </script>
 
 <h2>Login</h2>

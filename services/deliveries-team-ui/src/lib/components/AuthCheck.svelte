@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {user} from '$lib/client/auth/firebase';
+    import {user} from '$lib/client/firebase';
 </script>
 
 {#if $user}

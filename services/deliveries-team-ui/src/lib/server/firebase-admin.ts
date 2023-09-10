@@ -1,6 +1,6 @@
 import pkg from 'firebase-admin';
-import {getFirestore} from 'firebase-admin/lib/firestore';
-import {getAuth} from 'firebase-admin/lib/auth';
+import {getFirestore} from 'firebase-admin/firestore';
+import {getAuth} from 'firebase-admin/auth';
 import {FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY, FIREBASE_PROJECT_ID} from '$env/static/private';
 
 try {

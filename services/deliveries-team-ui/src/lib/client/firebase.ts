@@ -1,7 +1,7 @@
 import {writable, type Readable, derived} from 'svelte/store';
 import {doc, onSnapshot} from 'firebase/firestore';
 import {onAuthStateChanged, type User} from 'firebase/auth';
-import {auth, db} from './firebase-init';
+import {auth, db} from '$lib/client/firebase-init';
 
 /**
  * @return {User} a store with the current firebase user
