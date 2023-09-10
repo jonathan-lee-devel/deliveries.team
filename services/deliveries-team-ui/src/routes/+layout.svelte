@@ -11,10 +11,10 @@
 <NavHamburger on:click={toggle} />
 <NavUl {hidden}>
     <NavLi href="/" active={true} class="text-white">Home</NavLi>
-    <NavLi href="/about" class="text-white">About</NavLi>
-    <NavLi href="/services" class="text-white">Services</NavLi>
-    <NavLi href="/pricing" class="text-white">Pricing</NavLi>
-    <NavLi href="/contact" class="text-white">Contact</NavLi>
+    <NavLi href="/" class="text-white">About</NavLi>
+    <NavLi href="/" class="text-white">Services</NavLi>
+    <NavLi href="/" class="text-white">Pricing</NavLi>
+    <NavLi href="/" class="text-white">Contact</NavLi>
 </NavUl>
 </Navbar>
 <slot />
