@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*",
+    "**.svelte"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "google",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "rules": {
+        "max-len": [
+          "error",
+          {
+            "code": 120,
+            "tabWidth": 2,
+            "ignoreComments": true,
+            "ignoreUrls": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true
+          }
+        ],
+        "new-cap": 0,
+        "@typescript-eslint/no-explicit-any": 0
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [],
+      "rules": {}
+    }
+  ]
+}
