@@ -14,7 +14,7 @@
     <NavLi href="/" class="text-white">About</NavLi>
     <NavLi href="/" class="text-white">Services</NavLi>
     <NavLi href="/" class="text-white">Pricing</NavLi>
-    <NavLi href="/" class="text-white">Contact</NavLi>
+    <NavLi href="/login" class="text-white">Login</NavLi>
 </NavUl>
 </Navbar>
 <div class="min-h-screen flex flex-col">
