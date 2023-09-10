@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    background-color: #0e325b
+}
+
+.toast {
+    background-color: #3c6fac;
+}
