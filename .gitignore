@@ -162,3 +162,4 @@ dist
 package
 
 # End of https://www.toptal.com/developers/gitignore/api/node,svelte
+node_modules
