@@ -1,27 +1,9 @@
 <script>
-  import { signOutWithGoogle } from '$lib/auth/sign-in-with-google';
-    import { user } from '$lib/client/firebase';
     import '../app.css';
-    import {Navbar, NavBrand, NavHamburger, NavLi, NavUl} from "flowbite-svelte";
+    import Navbar from '$lib/components/Navbar.svelte'
 </script>
 
-<Navbar let:hidden let:toggle color="primary">
-    <NavBrand href="/">
-    <img src="/favicon.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-    <span class="self-center whitespace-nowrap text-xl font-semibold text-white ">Deliveries.Team</span>
-</NavBrand>
-<NavHamburger on:click={toggle} />
-<NavUl {hidden}>
-    <NavLi href="/" active={true} class="text-white">Home</NavLi>
-    <NavLi href="/" class="text-white">About</NavLi>
-    <NavLi href="/" class="text-white">Services</NavLi>
-    <NavLi href="/" class="text-white">Pricing</NavLi>
-    {#if !$user}
-        <NavLi href="/login" class="text-white">Login</NavLi>
-    {:else}
-        <NavLi on:click={signOutWithGoogle} class="text-white bg-red-700">Logout</NavLi>
-    {/if}
-</NavUl>
+<Navbar>
 </Navbar>
 <div class="min-h-screen flex flex-col">
     <slot />
