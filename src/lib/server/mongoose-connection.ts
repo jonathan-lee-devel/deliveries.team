@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import type {ConnectOptions} from 'mongoose';
+import {MONGO_URL} from '$env/static/private';
 
 /** Callback for establishing or re-establishing mongo connection */
 type IOnConnectedCallback = (mongoUrl: string) => void;
@@ -142,7 +143,7 @@ class SafeMongooseConnection {
   };
 }
 
-const mongoUrl = process.env.DATABASE_URL ?? 'mongodb://localhost:27017/deliveries-team';
+const mongoUrl = MONGO_URL ?? 'mongodb://localhost:27017/deliveries-team';
 
 export const safeMongooseConnection = new SafeMongooseConnection({
   mongoUrl,

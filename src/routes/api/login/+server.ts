@@ -3,7 +3,7 @@ import type {RequestHandler} from './$types';
 import {adminAuth} from '$lib/server/firebase-admin';
 import {LoginStatus} from '$lib/auth/login-status';
 import {COOKIE_VALIDITY_PERIOD, SESSION_COOKIE_NAME} from '$lib/auth/auth-constants';
-import {UserModel} from '$lib/server/models/User';
+import {UserLoginModel} from '$lib/server/models/UserLogin';
 
 export const POST: RequestHandler = async ({request, cookies}) => {
   const {idToken} = await request.json();
@@ -14,15 +14,8 @@ export const POST: RequestHandler = async ({request, cookies}) => {
     const cookie = await adminAuth.createSessionCookie(idToken, {expiresIn: COOKIE_VALIDITY_PERIOD});
     const options = {maxAge: COOKIE_VALIDITY_PERIOD, httpOnly: true, secure: true, path: '/'};
 
-    console.log('Saving user to the database...');
-    await UserModel.create({
-      email: 'jonathan.lee.devel@gmail.com',
-      emailVerified: false,
-      firstName: 'Jonathan',
-      lastName: 'Lee',
-      googleId: undefined,
-      password: undefined,
-    });
+    console.log('Saving user login to the database...');
+    await UserLoginModel.create({email: 'test@example.com'});
 
     cookies.set(SESSION_COOKIE_NAME, cookie, options);
 
