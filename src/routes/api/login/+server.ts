@@ -5,7 +5,7 @@ import {LoginStatus} from '$lib/auth/login-status';
 import {COOKIE_VALIDITY_PERIOD, SESSION_COOKIE_NAME} from '$lib/auth/auth-constants';
 import {UserModel} from '$lib/server/models/User';
 
-export const POST: RequestHandler = async ({request, cookies, locals}) => {
+export const POST: RequestHandler = async ({request, cookies}) => {
   const {idToken} = await request.json();
 
   const decodedIdToken = await adminAuth.verifyIdToken(idToken);
